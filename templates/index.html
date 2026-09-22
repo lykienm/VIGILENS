@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VIGILENS | Vehicle Monitoring System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">V</div>
+                <div>
+                    <h2>VIGILENS</h2>
+                    <span>Vehicle Monitoring</span>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Live Camera</a>
+                <a href="#">Violations</a>
+                <a href="#">Records</a>
+                <a href="#">Settings</a>
+            </nav>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Online
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Vehicle monitoring and illegal-parking detection</p>
+                </div>
+
+                <div class="date">
+                    VIGILENS Monitoring System
+                </div>
+            </header>
+
+
+            <!-- STAT CARDS -->
+            <section class="stats">
+
+                <div class="card">
+                    <span class="card-title">Vehicles Detected</span>
+                    <strong>24</strong>
+                    <small>Current monitoring session</small>
+                </div>
+
+                <div class="card">
+                    <span class="card-title">Active Violations</span>
+                    <strong class="warning">3</strong>
+                    <small>Vehicles exceeding dwell time</small>
+                </div>
+
+                <div class="card">
+                    <span class="card-title">Detection Accuracy</span>
+                    <strong>95%</strong>
+                    <small>Based on current testing</small>
+                </div>
+
+                <div class="card">
+                    <span class="card-title">System Status</span>
+                    <strong class="online">ONLINE</strong>
+                    <small>Camera and detection active</small>
+                </div>
+
+            </section>
+
+
+            <!-- CAMERA + ALERTS -->
+            <section class="content-grid">
+
+                <div class="camera-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h2>Live Camera</h2>
+                            <span>Restricted Zone Monitoring</span>
+                        </div>
+
+                        <div class="live">
+                            <span></span> LIVE
+                        </div>
+                    </div>
+
+                    <div class="camera-screen">
+                        <div class="camera-message">
+                            <div class="camera-icon">📷</div>
+                            <h3>Camera Feed</h3>
+                            <p>ESP32-CAM video stream will appear here.</p>
+                        </div>
+
+                        <div class="zone">
+                            RESTRICTED ZONE
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="alerts-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h2>Recent Alerts</h2>
+                            <span>Latest detected violations</span>
+                        </div>
+                    </div>
+
+                    <div class="alert">
+                        <div class="alert-icon">!</div>
+                        <div>
+                            <strong>Parking Violation</strong>
+                            <p>Vehicle detected in restricted zone</p>
+                            <small>10:32 AM</small>
+                        </div>
+                    </div>
+
+                    <div class="alert">
+                        <div class="alert-icon">!</div>
+                        <div>
+                            <strong>Parking Violation</strong>
+                            <p>Vehicle exceeded 10-minute dwell time</p>
+                            <small>10:18 AM</small>
+                        </div>
+                    </div>
+
+                    <div class="alert">
+                        <div class="alert-icon">!</div>
+                        <div>
+                            <strong>Vehicle Detected</strong>
+                            <p>Vehicle entered monitoring area</p>
+                            <small>9:56 AM</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT RECORDS -->
+            <section class="records-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Recent Records</h2>
+                        <span>Vehicle monitoring history</span>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Event</th>
+                            <th>Status</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>10:32 AM</td>
+                            <td>Vehicle in restricted zone</td>
+                            <td><span class="badge violation">Violation</span></td>
+                            <td>12 min</td>
+                        </tr>
+
+                        <tr>
+                            <td>10:18 AM</td>
+                            <td>Vehicle detected</td>
+                            <td><span class="badge monitoring">Monitoring</span></td>
+                            <td>5 min</td>
+                        </tr>
+
+                        <tr>
+                            <td>9:56 AM</td>
+                            <td>Vehicle detected</td>
+                            <td><span class="badge cleared">Cleared</span></td>
+                            <td>3 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
