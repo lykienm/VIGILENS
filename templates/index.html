@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,24 +18,48 @@
         <aside class="sidebar">
 
             <div class="logo">
+
                 <div class="logo-icon">V</div>
+
                 <div>
                     <h2>VIGILENS</h2>
                     <span>Vehicle Monitoring</span>
                 </div>
+
             </div>
 
+            <!-- NAVIGATION -->
             <nav>
-                <a href="#" class="active">Dashboard</a>
-                <a href="#">Live Camera</a>
-                <a href="#">Violations</a>
-                <a href="#">Records</a>
-                <a href="#">Settings</a>
+
+                <a href="#" class="active" data-section="dashboard">
+                    Dashboard
+                </a>
+
+                <a href="#" data-section="live-camera-section">
+                    Live Camera
+                </a>
+
+                <a href="#" data-section="violations-section">
+                    Violations
+                </a>
+
+                <a href="#" data-section="records-section">
+                    Records
+                </a>
+
+                <a href="#" data-section="settings-section">
+                    Settings
+                </a>
+
             </nav>
 
+            <!-- SYSTEM STATUS -->
             <div class="system-status">
+
                 <span class="status-dot"></span>
+
                 System Online
+
             </div>
 
         </aside>
@@ -43,113 +68,464 @@
         <!-- MAIN CONTENT -->
         <main class="main-content">
 
-            <header class="topbar">
-                <div>
-                    <h1>Dashboard</h1>
-                    <p>Vehicle monitoring and illegal-parking detection</p>
-                </div>
 
-                <div class="date">
-                    VIGILENS Monitoring System
-                </div>
-            </header>
+            <!-- ====================================== -->
+            <!-- DASHBOARD SECTION -->
+            <!-- ====================================== -->
+
+            <section id="dashboard" class="page-section">
+
+                <!-- TOPBAR -->
+                <header class="topbar">
+
+                    <div>
+
+                        <h1>Dashboard</h1>
+
+                        <p>
+                            Vehicle monitoring and illegal-parking detection
+                        </p>
+
+                    </div>
+
+                    <div class="date">
+                        VIGILENS Monitoring System
+                    </div>
+
+                </header>
 
 
-            <!-- STAT CARDS -->
-            <section class="stats">
+                <!-- STAT CARDS -->
+                <section class="stats">
 
-                <div class="card">
-                    <span class="card-title">Vehicles Detected</span>
-                    <strong>24</strong>
-                    <small>Current monitoring session</small>
-                </div>
+                    <div class="card">
 
-                <div class="card">
-                    <span class="card-title">Active Violations</span>
-                    <strong class="warning">3</strong>
-                    <small>Vehicles exceeding dwell time</small>
-                </div>
+                        <span class="card-title">
+                            Vehicles Detected
+                        </span>
 
-                <div class="card">
-                    <span class="card-title">Detection Accuracy</span>
-                    <strong>95%</strong>
-                    <small>Based on current testing</small>
-                </div>
+                        <strong>
+                            24
+                        </strong>
 
-                <div class="card">
-                    <span class="card-title">System Status</span>
-                    <strong class="online">ONLINE</strong>
-                    <small>Camera and detection active</small>
+                        <small>
+                            Current monitoring session
+                        </small>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <span class="card-title">
+                            Active Violations
+                        </span>
+
+                        <strong class="warning">
+                            3
+                        </strong>
+
+                        <small>
+                            Vehicles exceeding dwell time
+                        </small>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <span class="card-title">
+                            Detection Accuracy
+                        </span>
+
+                        <strong>
+                            95%
+                        </strong>
+
+                        <small>
+                            Based on current testing
+                        </small>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <span class="card-title">
+                            System Status
+                        </span>
+
+                        <strong class="online">
+                            ONLINE
+                        </strong>
+
+                        <small>
+                            Camera and detection active
+                        </small>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CAMERA + ALERTS -->
+                <section class="content-grid">
+
+
+                    <!-- CAMERA PANEL -->
+                    <div class="camera-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Live Camera
+                                </h2>
+
+                                <span>
+                                    Restricted Zone Monitoring
+                                </span>
+
+                            </div>
+
+
+                            <div class="live">
+
+                                <span></span>
+
+                                LIVE
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="camera-screen">
+
+                            <div class="camera-message">
+
+                                <div class="camera-icon">
+                                </div>
+
+                                <h3>
+                                    Camera Feed
+                                </h3>
+
+                                <p>
+                                    ESP32-CAM video stream will appear here.
+                                </p>
+
+                            </div>
+
+
+                            <div class="zone">
+                                RESTRICTED ZONE
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ALERTS PANEL -->
+                    <div class="alerts-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Recent Alerts
+                                </h2>
+
+                                <span>
+                                    Latest detected violations
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert">
+
+                            <div class="alert-icon">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Parking Violation
+                                </strong>
+
+                                <p>
+                                    Vehicle detected in restricted zone
+                                </p>
+
+                                <small>
+                                    10:32 AM
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert">
+
+                            <div class="alert-icon">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Parking Violation
+                                </strong>
+
+                                <p>
+                                    Vehicle exceeded 10-minute dwell time
+                                </p>
+
+                                <small>
+                                    10:18 AM
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert">
+
+                            <div class="alert-icon">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Parking Violation
+                                </strong>
+
+                                <p>
+                                    Vehicle remained in restricted zone
+                                </p>
+
+                                <small>
+                                    09:54 AM
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <!-- ====================================== -->
+            <!-- LIVE CAMERA SECTION -->
+            <!-- ====================================== -->
+
+            <section
+                id="live-camera-section"
+                class="page-section"
+                style="display: none;"
+            >
+
+                <header class="topbar">
+
+                    <div>
+
+                        <h1>Live Camera</h1>
+
+                        <p>
+                            Real-time ESP32-CAM monitoring
+                        </p>
+
+                    </div>
+
+                </header>
+
+
+                <div class="camera-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                ESP32-CAM Feed
+                            </h2>
+
+                            <span>
+                                Restricted Zone Monitoring
+                            </span>
+
+                        </div>
+
+                        <div class="live">
+
+                            <span></span>
+
+                            LIVE
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="camera-screen">
+
+                        <div class="camera-message">
+
+                            <div class="camera-icon">
+                            </div>
+
+                            <h3>
+                                Camera Feed
+                            </h3>
+
+                            <p>
+                                ESP32-CAM video stream will appear here.
+                            </p>
+
+                        </div>
+
+
+                        <div class="zone">
+                            RESTRICTED ZONE
+                        </div>
+
+                    </div>
+
                 </div>
 
             </section>
 
 
-            <!-- CAMERA + ALERTS -->
-            <section class="content-grid">
+            <!-- ====================================== -->
+            <!-- VIOLATIONS SECTION -->
+            <!-- ====================================== -->
 
-                <div class="camera-panel">
+            <section
+                id="violations-section"
+                class="page-section"
+                style="display: none;"
+            >
 
-                    <div class="panel-header">
-                        <div>
-                            <h2>Live Camera</h2>
-                            <span>Restricted Zone Monitoring</span>
-                        </div>
+                <header class="topbar">
 
-                        <div class="live">
-                            <span></span> LIVE
-                        </div>
+                    <div>
+
+                        <h1>Violations</h1>
+
+                        <p>
+                            Detected illegal-parking violations
+                        </p>
+
                     </div>
 
-                    <div class="camera-screen">
-                        <div class="camera-message">
-                            <div class="camera-icon">📷</div>
-                            <h3>Camera Feed</h3>
-                            <p>ESP32-CAM video stream will appear here.</p>
-                        </div>
-
-                        <div class="zone">
-                            RESTRICTED ZONE
-                        </div>
-                    </div>
-
-                </div>
+                </header>
 
 
                 <div class="alerts-panel">
 
                     <div class="panel-header">
+
                         <div>
-                            <h2>Recent Alerts</h2>
-                            <span>Latest detected violations</span>
+
+                            <h2>
+                                Active Violations
+                            </h2>
+
+                            <span>
+                                Vehicles exceeding the allowed dwell time
+                            </span>
+
                         </div>
+
                     </div>
 
-                    <div class="alert">
-                        <div class="alert-icon">!</div>
-                        <div>
-                            <strong>Parking Violation</strong>
-                            <p>Vehicle detected in restricted zone</p>
-                            <small>10:32 AM</small>
-                        </div>
-                    </div>
 
                     <div class="alert">
-                        <div class="alert-icon">!</div>
-                        <div>
-                            <strong>Parking Violation</strong>
-                            <p>Vehicle exceeded 10-minute dwell time</p>
-                            <small>10:18 AM</small>
+
+                        <div class="alert-icon">
+                            !
                         </div>
+
+                        <div>
+
+                            <strong>
+                                Parking Violation
+                            </strong>
+
+                            <p>
+                                Vehicle detected in restricted zone
+                            </p>
+
+                            <small>
+                                10:32 AM
+                            </small>
+
+                        </div>
+
                     </div>
 
+
                     <div class="alert">
-                        <div class="alert-icon">!</div>
-                        <div>
-                            <strong>Vehicle Detected</strong>
-                            <p>Vehicle entered monitoring area</p>
-                            <small>9:56 AM</small>
+
+                        <div class="alert-icon">
+                            !
                         </div>
+
+                        <div>
+
+                            <strong>
+                                Parking Violation
+                            </strong>
+
+                            <p>
+                                Vehicle exceeded 10-minute dwell time
+                            </p>
+
+                            <small>
+                                10:18 AM
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div class="alert-icon">
+                            !
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Parking Violation
+                            </strong>
+
+                            <p>
+                                Vehicle remained in restricted zone
+                            </p>
+
+                            <small>
+                                09:54 AM
+                            </small>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -157,55 +533,392 @@
             </section>
 
 
-            <!-- RECENT RECORDS -->
-            <section class="records-panel">
+            <!-- ====================================== -->
+            <!-- RECORDS SECTION -->
+            <!-- ====================================== -->
 
-                <div class="panel-header">
+            <section
+                id="records-section"
+                class="page-section"
+                style="display: none;"
+            >
+
+                <header class="topbar">
+
                     <div>
-                        <h2>Recent Records</h2>
-                        <span>Vehicle monitoring history</span>
+
+                        <h1>Records</h1>
+
+                        <p>
+                            Previous vehicle and violation records
+                        </p>
+
                     </div>
+
+                </header>
+
+
+                <div class="alerts-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Monitoring Records
+                            </h2>
+
+                            <span>
+                                Recorded VIGILENS events
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div class="alert-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Vehicle Detection
+                            </strong>
+
+                            <p>
+                                Vehicle detected during monitoring
+                            </p>
+
+                            <small>
+                                Today - 10:32 AM
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div class="alert-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Vehicle Detection
+                            </strong>
+
+                            <p>
+                                Vehicle detected during monitoring
+                            </p>
+
+                            <small>
+                                Today - 10:18 AM
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div class="alert-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Vehicle Detection
+                            </strong>
+
+                            <p>
+                                Vehicle detected during monitoring
+                            </p>
+
+                            <small>
+                                Today - 09:54 AM
+                            </small>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Event</th>
-                            <th>Status</th>
-                            <th>Duration</th>
-                        </tr>
-                    </thead>
+            </section>
 
-                    <tbody>
-                        <tr>
-                            <td>10:32 AM</td>
-                            <td>Vehicle in restricted zone</td>
-                            <td><span class="badge violation">Violation</span></td>
-                            <td>12 min</td>
-                        </tr>
 
-                        <tr>
-                            <td>10:18 AM</td>
-                            <td>Vehicle detected</td>
-                            <td><span class="badge monitoring">Monitoring</span></td>
-                            <td>5 min</td>
-                        </tr>
+            <!-- ====================================== -->
+            <!-- SETTINGS SECTION -->
+            <!-- ====================================== -->
 
-                        <tr>
-                            <td>9:56 AM</td>
-                            <td>Vehicle detected</td>
-                            <td><span class="badge cleared">Cleared</span></td>
-                            <td>3 min</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section
+                id="settings-section"
+                class="page-section"
+                style="display: none;"
+            >
+
+                <header class="topbar">
+
+                    <div>
+
+                        <h1>Settings</h1>
+
+                        <p>
+                            Configure VIGILENS monitoring settings
+                        </p>
+
+                    </div>
+
+                </header>
+
+
+                <div class="alerts-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Monitoring Settings
+                            </h2>
+
+                            <span>
+                                Adjust system monitoring preferences
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div>
+
+                            <strong>
+                                Monitoring Status
+                            </strong>
+
+                            <p>
+                                Enable or disable vehicle monitoring.
+                            </p>
+
+                            <select id="monitoring-status">
+
+                                <option value="Active">
+                                    Active
+                                </option>
+
+                                <option value="Inactive">
+                                    Inactive
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div>
+
+                            <strong>
+                                Violation Timer
+                            </strong>
+
+                            <p>
+                                Set the amount of time before a vehicle is considered a violation.
+                            </p>
+
+                            <select id="violation-timer">
+
+                                <option value="10">
+                                    10 minutes
+                                </option>
+
+                                <option value="5">
+                                    5 minutes
+                                </option>
+
+                                <option value="15">
+                                    15 minutes
+                                </option>
+
+                                <option value="20">
+                                    20 minutes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert">
+
+                        <div>
+
+                            <button
+                                type="button"
+                                id="save-settings"
+                            >
+                                Save Settings
+                            </button>
+
+                            <p id="settings-message"></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </section>
+
 
         </main>
 
     </div>
 
+
+    <!-- ====================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ====================================== -->
+
+    <script>
+
+        const navLinks = document.querySelectorAll("nav a");
+
+        const sections = document.querySelectorAll(".page-section");
+
+
+        /* NAVIGATION */
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener("click", function(event) {
+
+                event.preventDefault();
+
+
+                /* Remove active class */
+
+                navLinks.forEach(function(navLink) {
+
+                    navLink.classList.remove("active");
+
+                });
+
+
+                /* Add active class to selected link */
+
+                this.classList.add("active");
+
+
+                /* Hide all sections */
+
+                sections.forEach(function(section) {
+
+                    section.style.display = "none";
+
+                });
+
+
+                /* Show selected section */
+
+                const sectionId =
+                    this.getAttribute("data-section");
+
+                const selectedSection =
+                    document.getElementById(sectionId);
+
+
+                if (selectedSection) {
+
+                    selectedSection.style.display = "block";
+
+                }
+
+            });
+
+        });
+
+
+        /* SETTINGS */
+
+        const saveButton =
+            document.getElementById("save-settings");
+
+        const settingsMessage =
+            document.getElementById("settings-message");
+
+        const monitoringStatus =
+            document.getElementById("monitoring-status");
+
+        const violationTimer =
+            document.getElementById("violation-timer");
+
+
+        /* LOAD SAVED SETTINGS */
+
+        const savedMonitoringStatus =
+            localStorage.getItem("monitoringStatus");
+
+        const savedViolationTimer =
+            localStorage.getItem("violationTimer");
+
+
+        if (savedMonitoringStatus) {
+
+            monitoringStatus.value =
+                savedMonitoringStatus;
+
+        }
+
+
+        if (savedViolationTimer) {
+
+            violationTimer.value =
+                savedViolationTimer;
+
+        }
+
+
+        /* SAVE SETTINGS */
+
+        saveButton.addEventListener("click", function() {
+
+            localStorage.setItem(
+                "monitoringStatus",
+                monitoringStatus.value
+            );
+
+
+            localStorage.setItem(
+                "violationTimer",
+                violationTimer.value
+            );
+
+
+            settingsMessage.textContent =
+                "Settings saved successfully.";
+
+        });
+
+    </script>
+
 </body>
+
 </html>
